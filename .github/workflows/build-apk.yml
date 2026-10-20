@@ -25,15 +25,20 @@ jobs:
           flutter-version: '3.22.2'
           channel: 'stable'
 
-      - name: Find and Build Flutter Project
+      - name: Build APK File
         run: |
-          # البحث التلقائي عن مكان مشروع الفلاتر بناءً على ملف pubspec.yaml
-          PROJECT_DIR=$(find . -name "pubspec.yaml" -maxdepth 3 -exec dirname {} \;)
-          echo "تم العثور على المشروع في المسار: $PROJECT_DIR"
-          cd "$PROJECT_DIR"
-          
-          flutter pub get
-          flutter build apk --release
+          # البحث عن المسار الذي يحتوي على مجلد lib/main.dart الحقيقي
+          MAIN_PATH=$(find . -path "*/lib/main.dart" -not -path "*/.*" | head -n 1)
+          if [ -n "$MAIN_PATH" ]; then
+            TARGET_DIR=$(dirname $(dirname "$MAIN_PATH"))
+            echo "تم العثور على التطبيق الرئيسي في: $TARGET_DIR"
+            cd "$TARGET_DIR"
+            flutter pub get
+            flutter build apk --release
+          else
+            echo "لم يتم العثور على main.dart"
+            exit 1
+          fi
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
