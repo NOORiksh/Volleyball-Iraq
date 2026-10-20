@@ -27,14 +27,9 @@ jobs:
 
       - name: Ultimate Build Fix
         run: |
-          # الاحتفاظ بمجلد lib الخاص بك إن وجد، وإلا سنستخدم هيكل نظيف
-          echo "جاري تجهيز بيئة البناء..."
-          
-          # إذا لم يكن هناك مجلد lib رئيسي، سنقوم بإنشاء مشروع جديد كلياً بالاسم الصحيح
           if [ ! -d "lib" ]; then
             cd ..
             flutter create temp_project --platforms=android --org com.iraq.volleyball --project-name volleyball_iraq
-            # نقل محتويات المشروع الجديد إلى المستودع الحالي
             shopt -s dotglob
             cp -r temp_project/* ./
             rm -rf temp_project
@@ -42,11 +37,14 @@ jobs:
             flutter pub get
           fi
           
-          # بناء ملف الـ APK النهائي
           flutter build apk --release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: |
+            **/build/app/outputs/flutter-apk/*.apk
+            **/build/app/outputs/apk/release/*.apk
+            build/app/outputs/flutter-apk/*.apk
+          if-no-files-found: error
