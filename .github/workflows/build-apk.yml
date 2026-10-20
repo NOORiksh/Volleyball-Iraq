@@ -27,8 +27,8 @@ jobs:
 
       - name: Generate Android Platform & Get Dependencies
         run: |
-          # هذا الأمر سيقوم بإنشاء مجلد android والملفات الناقصة تلقائياً إذا لم تكن موجودة
-          flutter create . --platforms=android --org com.iraq.volleyball
+          # استخدام اسم متوافق مع شروط فلاتر (حروف صغيرة وشرطة سفلى)
+          flutter create . --platforms=android --org com.iraq.volleyball --project-name volleyball_iraq
           flutter pub get
 
       - name: Build APK
