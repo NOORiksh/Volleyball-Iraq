@@ -25,9 +25,24 @@ jobs:
           flutter-version: '3.22.2'
           channel: 'stable'
 
-      - name: Get Dependencies & Build APK
+      - name: Ultimate Build Fix
         run: |
-          flutter pub get
+          # الاحتفاظ بمجلد lib الخاص بك إن وجد، وإلا سنستخدم هيكل نظيف
+          echo "جاري تجهيز بيئة البناء..."
+          
+          # إذا لم يكن هناك مجلد lib رئيسي، سنقوم بإنشاء مشروع جديد كلياً بالاسم الصحيح
+          if [ ! -d "lib" ]; then
+            cd ..
+            flutter create temp_project --platforms=android --org com.iraq.volleyball --project-name volleyball_iraq
+            # نقل محتويات المشروع الجديد إلى المستودع الحالي
+            shopt -s dotglob
+            cp -r temp_project/* ./
+            rm -rf temp_project
+          else
+            flutter pub get
+          fi
+          
+          # بناء ملف الـ APK النهائي
           flutter build apk --release
 
       - name: Upload APK Artifact
