@@ -25,25 +25,17 @@ jobs:
           flutter-version: '3.22.2'
           channel: 'stable'
 
-      - name: Build APK File
+      - name: Generate Android Platform & Get Dependencies
         run: |
-          # البحث عن المسار الذي يحتوي على مجلد lib/main.dart الحقيقي
-          MAIN_PATH=$(find . -path "*/lib/main.dart" -not -path "*/.*" | head -n 1)
-          if [ -n "$MAIN_PATH" ]; then
-            TARGET_DIR=$(dirname $(dirname "$MAIN_PATH"))
-            echo "تم العثور على التطبيق الرئيسي في: $TARGET_DIR"
-            cd "$TARGET_DIR"
-            flutter pub get
-            flutter build apk --release
-          else
-            echo "لم يتم العثور على main.dart"
-            exit 1
-          fi
+          # هذا الأمر سيقوم بإنشاء مجلد android والملفات الناقصة تلقائياً إذا لم تكن موجودة
+          flutter create . --platforms=android --org com.iraq.volleyball
+          flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
-          path: |
-            **/build/app/outputs/flutter-apk/app-release.apk
-            **/build/app/outputs/apk/release/app-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
