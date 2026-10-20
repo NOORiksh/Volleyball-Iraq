@@ -39,12 +39,15 @@ jobs:
           
           flutter build apk --release
 
+      - name: Locate and Copy APK
+        run: |
+          mkdir -p final_apk_folder
+          find . -name "*.apk" -exec cp {} final_apk_folder/ \;
+          echo "تم العثور على الملفات التالية:"
+          ls -la final_apk_folder/
+
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
-          path: |
-            **/build/app/outputs/flutter-apk/*.apk
-            **/build/app/outputs/apk/release/*.apk
-            build/app/outputs/flutter-apk/*.apk
-          if-no-files-found: error
+          path: final_apk_folder/*.apk
