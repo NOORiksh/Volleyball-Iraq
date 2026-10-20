@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727712823053",
+    "project_id": "volleyball-iraq",
+    "storage_bucket": "volleyball-iraq.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727712823053:android:fa3cb2be5ff2a45eb56244",
+        "android_client_info": {
+          "package_name": "com.iraq.volleyball"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6Qjn5UGJk3yRx-F3EPsVK_ZN3wH_ZKZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

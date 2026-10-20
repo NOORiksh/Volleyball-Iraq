@@ -1,0 +1,15 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function role() { return request.auth.token.get('role', 'fan'); }
+    function isImage() { return request.resource.contentType.matches('image/.*') && request.resource.size < 3 * 1024 * 1024; }
+    function isSuper() { return request.auth != null && role() == 'superadmin'; }
+    function canN() { return request.auth != null && role() in ['superadmin', 'admin', 'editor']; }
+
+    // صور الصفحة الرئيسية والرعاة: للمدير فقط
+    match /site/{f=**}     { allow read: if request.auth != null; allow create, update: if isSuper() && isImage(); allow delete: if isSuper(); }
+    match /sponsors/{f=**} { allow read: if request.auth != null; allow create, update: if isSuper() && isImage(); allow delete: if isSuper(); }
+    // صور الأخبار
+    match /news/{f=**}     { allow read: if request.auth != null; allow create, update: if canN() && isImage(); allow delete: if canN(); }
+  }
+}

@@ -1,0 +1,1546 @@
+{
+ "version": 1,
+ "schema": {
+  "id": "string",
+  "category": "rules|court|terms|history|tournament",
+  "difficulty": "1-3",
+  "text": "string",
+  "options": "string[] (2-4)",
+  "answerIndex": "0-based index",
+  "explanation": "string"
+ },
+ "questions": [
+  {
+   "id": "q001",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "كم عدد اللاعبين الموجودين في الملعب لكل فريق؟",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "answerIndex": 2,
+   "explanation": "يلعب كل فريق بستة لاعبين في الملعب."
+  },
+  {
+   "id": "q002",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "إلى كم نقطة ينتهي الشوط العادي؟",
+   "options": [
+    "15",
+    "21",
+    "25",
+    "30"
+   ],
+   "answerIndex": 2,
+   "explanation": "الأشواط العادية تنتهي عند 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q003",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "إلى كم نقطة ينتهي الشوط الفاصل؟",
+   "options": [
+    "11",
+    "15",
+    "20",
+    "25"
+   ],
+   "answerIndex": 1,
+   "explanation": "الشوط الحاسم ينتهي عند 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q004",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "ما أقل فارق نقاط للفوز بالشوط؟",
+   "options": [
+    "نقطة واحدة",
+    "نقطتان",
+    "ثلاث نقاط",
+    "لا يوجد شرط"
+   ],
+   "answerIndex": 1,
+   "explanation": "يجب الفوز بفارق نقطتين على الأقل."
+  },
+  {
+   "id": "q005",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "إذا تعادل الفريقان 24-24 في شوط عادي فمتى ينتهي الشوط؟",
+   "options": [
+    "عند 25",
+    "عند أول نقطة إضافية",
+    "عند تحقق فارق نقطتين",
+    "عند 30"
+   ],
+   "answerIndex": 2,
+   "explanation": "يستمر اللعب حتى يتقدم أحدهما بفارق نقطتين مثل 26-24."
+  },
+  {
+   "id": "q006",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "كم أقصى عدد لمسات مسموح لفريق واحد قبل إرسال الكرة للخصم؟",
+   "options": [
+    "مرتان",
+    "ثلاث",
+    "أربع",
+    "خمس"
+   ],
+   "answerIndex": 1,
+   "explanation": "ثلاث لمسات كحد أقصى (لا يُحتسب اللمس الأول للصد)."
+  },
+  {
+   "id": "q007",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "ماذا تُسمّى لمس اللاعب الكرة مرتين متتاليتين بشكل مخالف؟",
+   "options": [
+    "خطأ إرسال",
+    "لمسة مزدوجة",
+    "صد",
+    "ضربة ساحقة"
+   ],
+   "answerIndex": 1,
+   "explanation": "اللمسة المزدوجة خطأ يمنح النقطة للخصم."
+  },
+  {
+   "id": "q008",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "في أي اتجاه يدور اللاعبون عند كسب الفريق حق الإرسال؟",
+   "options": [
+    "مع عقارب الساعة",
+    "عكس عقارب الساعة",
+    "عشوائي",
+    "لا يدورون"
+   ],
+   "answerIndex": 0,
+   "explanation": "الدوران يكون مع اتجاه عقارب الساعة."
+  },
+  {
+   "id": "q009",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "ما نظام احتساب النقاط المعتمد حالياً في الكرة الطائرة؟",
+   "options": [
+    "نقطة الإرسال فقط",
+    "النقطة المباشرة (Rally Point)",
+    "الفوز بالأشواط الثلاثة",
+    "نظام الفرص"
+   ],
+   "answerIndex": 1,
+   "explanation": "تُحتسب نقطة على كل كرة بغض النظر عن صاحب الإرسال."
+  },
+  {
+   "id": "q010",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "كم عدد طلبات الوقت المستقطع لكل فريق في الشوط الواحد (قواعد FIVB)؟",
+   "options": [
+    "واحد",
+    "اثنان",
+    "ثلاثة",
+    "غير محدود"
+   ],
+   "answerIndex": 1,
+   "explanation": "لكل فريق وقتان مستقطعان في الشوط."
+  },
+  {
+   "id": "q011",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "كم عدد التبديلات المسموحة لكل فريق في الشوط الواحد (قواعد FIVB)؟",
+   "options": [
+    "3",
+    "4",
+    "6",
+    "8"
+   ],
+   "answerIndex": 2,
+   "explanation": "يُسمح بستة تبديلات في الشوط."
+  },
+  {
+   "id": "q012",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "ماذا يحدث إذا لمس اللاعب الشبكة أثناء اللعب؟",
+   "options": [
+    "لا شيء",
+    "خطأ ويُمنح الخصم النقطة",
+    "إعادة الإرسال",
+    "إنذار فقط دائماً"
+   ],
+   "answerIndex": 1,
+   "explanation": "لمس الشبكة أثناء اللعب يُعدّ خطأ (مع استثناءات محدودة)."
+  },
+  {
+   "id": "q013",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "ما المسافة التي يبعدها خط الهجوم عن الشبكة؟",
+   "options": [
+    "2 متر",
+    "3 أمتار",
+    "4 أمتار",
+    "5 أمتار"
+   ],
+   "answerIndex": 1,
+   "explanation": "خط الهجوم على بعد 3 أمتار من محور الشبكة."
+  },
+  {
+   "id": "q014",
+   "category": "court",
+   "difficulty": 1,
+   "text": "ما أبعاد ملعب الكرة الطائرة؟",
+   "options": [
+    "16×8 م",
+    "18×9 م",
+    "20×10 م",
+    "15×7.5 م"
+   ],
+   "answerIndex": 1,
+   "explanation": "الملعب مستطيل 18 متراً طولاً و9 أمتار عرضاً."
+  },
+  {
+   "id": "q015",
+   "category": "court",
+   "difficulty": 2,
+   "text": "ما ارتفاع الشبكة لفئة الرجال؟",
+   "options": [
+    "2.24 م",
+    "2.35 م",
+    "2.43 م",
+    "2.50 م"
+   ],
+   "answerIndex": 2,
+   "explanation": "ارتفاع شبكة الرجال 2.43 م."
+  },
+  {
+   "id": "q016",
+   "category": "court",
+   "difficulty": 2,
+   "text": "ما ارتفاع الشبكة لفئة السيدات؟",
+   "options": [
+    "2.10 م",
+    "2.24 م",
+    "2.43 م",
+    "2.30 م"
+   ],
+   "answerIndex": 1,
+   "explanation": "ارتفاع شبكة السيدات 2.24 م."
+  },
+  {
+   "id": "q017",
+   "category": "court",
+   "difficulty": 3,
+   "text": "ما محيط كرة الكرة الطائرة الرسمية؟",
+   "options": [
+    "60-62 سم",
+    "65-67 سم",
+    "70-72 سم",
+    "75-77 سم"
+   ],
+   "answerIndex": 1,
+   "explanation": "محيطها بين 65 و67 سم."
+  },
+  {
+   "id": "q018",
+   "category": "terms",
+   "difficulty": 1,
+   "text": "ماذا يُسمّى الإرسال الذي يسجل نقطة مباشرة دون أن يستقبله الخصم؟",
+   "options": [
+    "ديج",
+    "إيس (Ace)",
+    "بلوك",
+    "سيت"
+   ],
+   "answerIndex": 1,
+   "explanation": "الإيس نقطة مباشرة من الإرسال."
+  },
+  {
+   "id": "q019",
+   "category": "terms",
+   "difficulty": 1,
+   "text": "ماذا يُسمّى اعتراض الكرة عند الشبكة بأيدٍ مرفوعة؟",
+   "options": [
+    "صد (Block)",
+    "استقبال",
+    "إرسال",
+    "تمرير"
+   ],
+   "answerIndex": 0,
+   "explanation": "الصد هو أول خط دفاع عند الشبكة."
+  },
+  {
+   "id": "q020",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "ماذا يُسمّى استقبال ضربة ساحقة وإنقاذ الكرة قبل سقوطها؟",
+   "options": [
+    "ديج (Dig)",
+    "بلوك",
+    "إيس",
+    "فولت"
+   ],
+   "answerIndex": 0,
+   "explanation": "الديج هو الدفاع الأرضي عن الضربة الساحقة."
+  },
+  {
+   "id": "q021",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "ما اسم الضربة الهجومية القوية من أعلى الشبكة؟",
+   "options": [
+    "ضربة ساحقة (Spike)",
+    "تمريرة",
+    "إرسال",
+    "ديج"
+   ],
+   "answerIndex": 0,
+   "explanation": "السبايك هو الهجوم القوي للأعلى والأسفل."
+  },
+  {
+   "id": "q022",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "ما وظيفة الممرّر (Setter) في الفريق؟",
+   "options": [
+    "الإرسال فقط",
+    "تجهيز الكرة للمهاجمين",
+    "الدفاع الخلفي فقط",
+    "الصد فقط"
+   ],
+   "answerIndex": 1,
+   "explanation": "الممرر يقود الهجوم ويجهّز الكرة للضاربين."
+  },
+  {
+   "id": "q023",
+   "category": "terms",
+   "difficulty": 3,
+   "text": "ما اللاعب المتخصص بالدفاع ويرتدي قميصاً بلون مختلف؟",
+   "options": [
+    "الممرر",
+    "الليبرو",
+    "المهاجم الجناحي",
+    "لاعب الوسط"
+   ],
+   "answerIndex": 1,
+   "explanation": "الليبرو لاعب دفاعي بزيّ مختلف اللون."
+  },
+  {
+   "id": "q024",
+   "category": "history",
+   "difficulty": 1,
+   "text": "في أي بلد اخترعت لعبة الكرة الطائرة؟",
+   "options": [
+    "فرنسا",
+    "اليابان",
+    "الولايات المتحدة",
+    "البرازيل"
+   ],
+   "answerIndex": 2,
+   "explanation": "اخترعها وليم مورغان في الولايات المتحدة."
+  },
+  {
+   "id": "q025",
+   "category": "history",
+   "difficulty": 2,
+   "text": "من مخترع الكرة الطائرة؟",
+   "options": [
+    "جيمس نايسميث",
+    "وليم مورغان",
+    "بيير دي كوبرتان",
+    "هنري فورد"
+   ],
+   "answerIndex": 1,
+   "explanation": "وليم ج. مورغان عام 1895."
+  },
+  {
+   "id": "q026",
+   "category": "history",
+   "difficulty": 2,
+   "text": "ما الاسم الأول للعبة عند اختراعها؟",
+   "options": [
+    "Mintonette",
+    "Volleyball Pro",
+    "Netball",
+    "Handball"
+   ],
+   "answerIndex": 0,
+   "explanation": "سُمّيت أولاً Mintonette."
+  },
+  {
+   "id": "q027",
+   "category": "history",
+   "difficulty": 3,
+   "text": "في أي عام اخترعت الكرة الطائرة؟",
+   "options": [
+    "1875",
+    "1895",
+    "1915",
+    "1935"
+   ],
+   "answerIndex": 1,
+   "explanation": "اخترعت عام 1895."
+  },
+  {
+   "id": "q028",
+   "category": "history",
+   "difficulty": 3,
+   "text": "في أي عام صارت الكرة الطائرة لعبة أولمبية؟",
+   "options": [
+    "1948",
+    "1956",
+    "1964",
+    "1972"
+   ],
+   "answerIndex": 2,
+   "explanation": "دخلت الأولمبياد في طوكيو 1964."
+  },
+  {
+   "id": "q029",
+   "category": "history",
+   "difficulty": 3,
+   "text": "في أي أولمبياد ظهرت الكرة الطائرة الشاطئية لأول مرة؟",
+   "options": [
+    "برشلونة 1992",
+    "أتلانتا 1996",
+    "سيدني 2000",
+    "أثينا 2004"
+   ],
+   "answerIndex": 1,
+   "explanation": "ظهرت أولمبياً في أتلانتا 1996."
+  },
+  {
+   "id": "q030",
+   "category": "tournament",
+   "difficulty": 1,
+   "text": "في بطولتنا: كم نقطة يحصل عليها الفائز بنتيجة 3-0؟",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answerIndex": 2,
+   "explanation": "الفوز 3-0 أو 3-1 يمنح 3 نقاط."
+  },
+  {
+   "id": "q031",
+   "category": "tournament",
+   "difficulty": 1,
+   "text": "في بطولتنا: كم نقطة يحصل عليها الخاسر في مباراة انتهت 3-2؟",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "answerIndex": 1,
+   "explanation": "الخاسر بنتيجة 3-2 يحصل على نقطة واحدة."
+  },
+  {
+   "id": "q032",
+   "category": "tournament",
+   "difficulty": 2,
+   "text": "في بطولتنا: كم نقطة يحصل عليها الفائز بنتيجة 3-2؟",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answerIndex": 1,
+   "explanation": "الفائز بنتيجة 3-2 يحصل على نقطتين."
+  },
+  {
+   "id": "q033",
+   "category": "tournament",
+   "difficulty": 2,
+   "text": "أول معيار لفض التعادل في النقاط في جدول بطولتنا؟",
+   "options": [
+    "نسبة النقاط",
+    "عدد المباريات المكسوبة",
+    "نسبة الأشواط",
+    "القرعة"
+   ],
+   "answerIndex": 1,
+   "explanation": "الترتيب: المباريات المكسوبة ثم نسبة الأشواط ثم نسبة النقاط."
+  },
+  {
+   "id": "q034",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "كم عدد اللاعبين في الصف الأمامي لكل فريق؟",
+   "options": [
+    "2",
+    "4",
+    "6",
+    "3"
+   ],
+   "answerIndex": 3,
+   "explanation": "ثلاثة في الصف الأمامي وثلاثة في الخلفي."
+  },
+  {
+   "id": "q035",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "كم عدد اللاعبين في الصف الخلفي لكل فريق؟",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q036",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "من أين يجب أن يُنفَّذ الإرسال؟",
+   "options": [
+    "من أي مكان",
+    "من خلف خط النهاية (منطقة الإرسال)",
+    "من داخل الملعب",
+    "من خلف خط الهجوم"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q037",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "ماذا يحدث إذا لمست الكرة خط الملعب؟",
+   "options": [
+    "تُحتسب داخل الملعب",
+    "تُحتسب خطأ للمهاجم",
+    "تُحتسب خارج الملعب",
+    "تُعاد الكرة"
+   ],
+   "answerIndex": 0,
+   "explanation": "الخط جزء من الملعب."
+  },
+  {
+   "id": "q038",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "كم شوطاً يحتاج الفريق للفوز في مباراة من 5 أشواط؟",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q039",
+   "category": "rules",
+   "difficulty": 1,
+   "text": "كم شوطاً يحتاج الفريق للفوز في مباراة من 3 أشواط؟",
+   "options": [
+    "1",
+    "4",
+    "2",
+    "3"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q040",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "أي شوط هو الفاصل في مباراة من 5 أشواط؟",
+   "options": [
+    "السادس",
+    "الثالث",
+    "الرابع",
+    "الخامس"
+   ],
+   "answerIndex": 3,
+   "explanation": "ويُلعب حتى 15 نقطة."
+  },
+  {
+   "id": "q041",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "أي شوط هو الفاصل في مباراة من 3 أشواط؟",
+   "options": [
+    "الثاني",
+    "الثالث",
+    "الرابع",
+    "الأول"
+   ],
+   "answerIndex": 1,
+   "explanation": "ويُلعب حتى 15 نقطة."
+  },
+  {
+   "id": "q042",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "متى يُسمح للاعب الخلفي بالضرب الهجومي؟",
+   "options": [
+    "بعد الصد فقط",
+    "في الشوط الأخير فقط",
+    "لا يُسمح أبداً",
+    "عندما يقفز من خلف خط الهجوم (3 م)"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q043",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "ما الذي لا يحق للّيبرو فعله؟",
+   "options": [
+    "التبديل مع لاعب خلفي",
+    "الاستقبال",
+    "الدفاع الخلفي",
+    "الصد أو محاولة الصد"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q044",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل يُحتسب تبديل الليبرو ضمن التبديلات المسموحة؟",
+   "options": [
+    "لا",
+    "نعم دائماً",
+    "نعم في الشوط الفاصل فقط",
+    "نعم لكن مرتين فقط"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q045",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "كم مدة الوقت المستقطع العادي؟",
+   "options": [
+    "30 ثانية",
+    "دقيقتان",
+    "60 ثانية",
+    "15 ثانية"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q046",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "متى يتبادل الفريقان الملاعب في الشوط الفاصل؟",
+   "options": [
+    "عند 10 نقاط",
+    "عند وصول أحدهما إلى 8 نقاط",
+    "لا يتبادلان",
+    "عند 5 نقاط"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q047",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "ماذا تعني 'خطأ الدوران' (Rotation fault)؟",
+   "options": [
+    "لمس الشبكة",
+    "لمسة مزدوجة",
+    "وقوف اللاعبين في غير ترتيبهم عند الإرسال",
+    "الإرسال بعد الصافرة"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q048",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "ماذا يُسمّى حمل الكرة أو دفعها بدلاً من ضربها؟",
+   "options": [
+    "إيس",
+    "بلوك",
+    "ديج",
+    "خطأ حمل الكرة (Lift)"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q049",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "إذا لمست كرة الإرسال الشبكة وعبرت إلى ملعب الخصم، ماذا يحدث؟",
+   "options": [
+    "يُعاد الإرسال",
+    "تستمر اللعبة",
+    "نقطة للمستقبل",
+    "خطأ"
+   ],
+   "answerIndex": 1,
+   "explanation": "القانون الحالي يسمح بذلك."
+  },
+  {
+   "id": "q050",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "ماذا تعني البطاقة الحمراء؟",
+   "options": [
+    "عقوبة: نقطة وإرسال للخصم",
+    "لا شيء",
+    "طرد من البطولة",
+    "إنذار فقط"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q051",
+   "category": "court",
+   "difficulty": 1,
+   "text": "ما عرض خطوط الملعب؟",
+   "options": [
+    "2 سم",
+    "10 سم",
+    "5 سم",
+    "15 سم"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q052",
+   "category": "court",
+   "difficulty": 2,
+   "text": "ما أبعاد نصف الملعب لكل فريق؟",
+   "options": [
+    "9×9 م",
+    "9×6 م",
+    "10×10 م",
+    "6×9 م"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q053",
+   "category": "court",
+   "difficulty": 2,
+   "text": "ما وزن الكرة الرسمية؟",
+   "options": [
+    "300–320 غرام",
+    "350–400 غرام",
+    "260–280 غرام",
+    "200–220 غرام"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q054",
+   "category": "court",
+   "difficulty": 1,
+   "text": "كم عدد لاعبي الفريق في الكرة الطائرة الشاطئية؟",
+   "options": [
+    "4",
+    "3",
+    "6",
+    "2"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q055",
+   "category": "court",
+   "difficulty": 2,
+   "text": "ما أبعاد ملعب الكرة الطائرة الشاطئية (كامل)؟",
+   "options": [
+    "12×6 م",
+    "16×8 م",
+    "20×10 م",
+    "18×9 م"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q056",
+   "category": "court",
+   "difficulty": 3,
+   "text": "ما طول الشبكة تقريباً؟",
+   "options": [
+    "18 م",
+    "6 م",
+    "9.5 م",
+    "12 م"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q057",
+   "category": "court",
+   "difficulty": 3,
+   "text": "ما عرض الشبكة؟",
+   "options": [
+    "1 م",
+    "0.5 م",
+    "1.5 م",
+    "2 م"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q058",
+   "category": "terms",
+   "difficulty": 1,
+   "text": "ماذا تعني كلمة Rally؟",
+   "options": [
+    "تبادل الكرة بين الفريقين حتى تسجيل نقطة",
+    "وقت مستقطع",
+    "إرسال خاطئ",
+    "تبديل لاعب"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q059",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "ماذا يعني Kill؟",
+   "options": [
+    "تبديل لاعب",
+    "ضربة هجومية تسجل نقطة مباشرة",
+    "إرسال خاطئ",
+    "صد فاشل"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q060",
+   "category": "terms",
+   "difficulty": 3,
+   "text": "ماذا يعني Side-out؟",
+   "options": [
+    "طرد لاعب",
+    "كسب المستقبِل للنقطة واستعادة حق الإرسال",
+    "خروج الكرة جانباً",
+    "خطأ دوران"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q061",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "ما هي ضربة Tip أو Dink؟",
+   "options": [
+    "صد جماعي",
+    "ضربة خفيفة بأطراف الأصابع فوق الصد",
+    "تمريرة خلفية",
+    "إرسال قفزي"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q062",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "ما هو الإرسال القفزي (Jump Serve)؟",
+   "options": [
+    "إرسال يقفز فيه اللاعب ويضرب الكرة بقوة",
+    "إرسال بلا ضربة",
+    "إرسال بيدين",
+    "إرسال من الأسفل"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q063",
+   "category": "terms",
+   "difficulty": 1,
+   "text": "أي مهارة تُنفَّذ بالساعدين من الأسفل؟",
+   "options": [
+    "الإرسال القفزي",
+    "التمرير بالأصابع",
+    "الصد",
+    "الاستقبال (Bump)"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q064",
+   "category": "terms",
+   "difficulty": 1,
+   "text": "أي مهارة تُنفَّذ بأطراف الأصابع فوق الرأس؟",
+   "options": [
+    "الاستقبال",
+    "الإرسال",
+    "التمرير (Set)",
+    "الصد"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q065",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "أين يقف المرسل عند بدء الإرسال؟",
+   "options": [
+    "المركز 2",
+    "المركز 5",
+    "المركز 1 (الخلفي الأيمن)",
+    "المركز 4"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q066",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "أي لاعب يقف عادة وسط الشبكة ويختص بالصد والهجمة السريعة؟",
+   "options": [
+    "الجناحي المستقبِل",
+    "الممرر",
+    "الليبرو",
+    "لاعب الوسط (Middle Blocker)"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q067",
+   "category": "terms",
+   "difficulty": 3,
+   "text": "ما اللاعب الذي يقف قطرياً مقابل الممرر؟",
+   "options": [
+    "الليبرو",
+    "لاعب الوسط",
+    "اللاعب المقابل (Opposite)",
+    "الجناحي"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q068",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "من أبرز مهام المهاجم الجناحي (Outside Hitter)؟",
+   "options": [
+    "الإرسال فقط",
+    "التمرير فقط",
+    "الاستقبال والهجوم من الجناح",
+    "الصد فقط"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q069",
+   "category": "terms",
+   "difficulty": 3,
+   "text": "ما هي هجمة Pipe؟",
+   "options": [
+    "هجمة من الجناح",
+    "صد مزدوج",
+    "ضربة إرسال",
+    "هجمة من الخط الخلفي في منتصف الملعب"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q070",
+   "category": "terms",
+   "difficulty": 3,
+   "text": "ما معنى تغطية الصد (Block Cover)؟",
+   "options": [
+    "وقت مستقطع",
+    "وقوف اللاعبين خلف المهاجم لالتقاط ارتداد الكرة من الصد",
+    "تبديل الليبرو",
+    "صد بثلاثة لاعبين"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q071",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "ما اسم خطأ دخول قدم المرسل الملعب قبل ضرب الكرة؟",
+   "options": [
+    "خطأ شبكة",
+    "خطأ القدم (Foot fault)",
+    "لمسة مزدوجة",
+    "خطأ دوران"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q072",
+   "category": "terms",
+   "difficulty": 2,
+   "text": "لمس اللاعب الشبكة أثناء اللعب يُسمّى؟",
+   "options": [
+    "خطأ شبكة (Net violation)",
+    "سيت",
+    "ديج",
+    "إيس"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q073",
+   "category": "terms",
+   "difficulty": 3,
+   "text": "ما معنى Overlap؟",
+   "options": [
+    "وقت مستقطع",
+    "خطأ إرسال",
+    "صد مزدوج",
+    "تداخل مخالف في مراكز اللاعبين عند الإرسال"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q074",
+   "category": "history",
+   "difficulty": 3,
+   "text": "من اقترح اسم Volleyball بدل Mintonette؟",
+   "options": [
+    "ألفريد هالستد",
+    "وليم مورغان",
+    "جون ويلسون",
+    "جيمس نايسميث"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q075",
+   "category": "history",
+   "difficulty": 2,
+   "text": "في أي مدينة أمريكية اخترعت اللعبة؟",
+   "options": [
+    "نيويورك",
+    "هوليوك (ماساتشوستس)",
+    "شيكاغو",
+    "بوسطن"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q076",
+   "category": "history",
+   "difficulty": 2,
+   "text": "في أي مؤسسة كان يعمل وليم مورغان؟",
+   "options": [
+    "اللجنة الأولمبية",
+    "جمعية الشبان المسيحيين (YMCA)",
+    "اتحاد الجامعات",
+    "الصليب الأحمر"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q077",
+   "category": "history",
+   "difficulty": 2,
+   "text": "في أي عام تأسس الاتحاد الدولي للكرة الطائرة (FIVB)؟",
+   "options": [
+    "1999",
+    "1947",
+    "1964",
+    "1895"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q078",
+   "category": "history",
+   "difficulty": 3,
+   "text": "في أي مدينة تأسس الاتحاد الدولي FIVB؟",
+   "options": [
+    "لوزان",
+    "روما",
+    "طوكيو",
+    "باريس"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q079",
+   "category": "history",
+   "difficulty": 3,
+   "text": "أي منتخب فاز بذهب الأولمبياد للرجال في طوكيو 1964؟",
+   "options": [
+    "الولايات المتحدة",
+    "البرازيل",
+    "الاتحاد السوفييتي",
+    "اليابان"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q080",
+   "category": "history",
+   "difficulty": 3,
+   "text": "أي منتخب فاز بذهب الأولمبياد للسيدات في طوكيو 1964؟",
+   "options": [
+    "كوبا",
+    "الاتحاد السوفييتي",
+    "الولايات المتحدة",
+    "اليابان"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q081",
+   "category": "history",
+   "difficulty": 3,
+   "text": "في أي عقد اعتمد FIVB نظام النقطة المباشرة (Rally Point)؟",
+   "options": [
+    "الخمسينيات",
+    "العقد الأول من الألفية",
+    "التسعينيات",
+    "الثمانينيات"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q082",
+   "category": "history",
+   "difficulty": 3,
+   "text": "في أي عام استُحدث مركز الليبرو دولياً؟",
+   "options": [
+    "1998",
+    "2008",
+    "1964",
+    "1947"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q083",
+   "category": "history",
+   "difficulty": 3,
+   "text": "أي بطولة للمنتخبات بدأها FIVB عام 2018؟",
+   "options": [
+    "كأس العالم",
+    "كأس القارات",
+    "دوري الأمم (Nations League)",
+    "دورة الألعاب"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q084",
+   "category": "history",
+   "difficulty": 2,
+   "text": "أراد مورغان لعبة أقل إجهاداً من أي لعبة؟",
+   "options": [
+    "الملاكمة",
+    "التنس",
+    "كرة السلة",
+    "كرة القدم"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q085",
+   "category": "history",
+   "difficulty": 3,
+   "text": "في أي ولاية أمريكية نشأت الكرة الطائرة الشاطئية؟",
+   "options": [
+    "تكساس",
+    "كاليفورنيا",
+    "فلوريدا",
+    "هاواي"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q086",
+   "category": "tournament",
+   "difficulty": 1,
+   "text": "كم مباراة في ربع النهائي لثمانية فرق؟",
+   "options": [
+    "4",
+    "8",
+    "2",
+    "1"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q087",
+   "category": "tournament",
+   "difficulty": 1,
+   "text": "كم مباراة في نصف النهائي؟",
+   "options": [
+    "3",
+    "2",
+    "4",
+    "1"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q088",
+   "category": "tournament",
+   "difficulty": 1,
+   "text": "كم فريقاً يتأهل من ربع النهائي إلى نصف النهائي؟",
+   "options": [
+    "2",
+    "8",
+    "4",
+    "1"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q089",
+   "category": "tournament",
+   "difficulty": 2,
+   "text": "في مباراة من 3 أشواط انتهت 2-1، كم نقطة للفائز في جدول بطولتنا؟",
+   "options": [
+    "3",
+    "0",
+    "2",
+    "1"
+   ],
+   "answerIndex": 2,
+   "explanation": "النتيجة تمتد إلى الشوط الفاصل فتُعدّ 2/1."
+  },
+  {
+   "id": "q090",
+   "category": "tournament",
+   "difficulty": 2,
+   "text": "في مباراة من 3 أشواط انتهت 2-0، كم نقطة للفائز؟",
+   "options": [
+    "2",
+    "1",
+    "3",
+    "4"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q091",
+   "category": "tournament",
+   "difficulty": 2,
+   "text": "فريق خسر 2-3، كم نقطة يحصل عليها؟",
+   "options": [
+    "0",
+    "2",
+    "1",
+    "3"
+   ],
+   "answerIndex": 2,
+   "explanation": ""
+  },
+  {
+   "id": "q092",
+   "category": "tournament",
+   "difficulty": 2,
+   "text": "فريق خسر 0-3، كم نقطة يحصل عليها؟",
+   "options": [
+    "3",
+    "0",
+    "1",
+    "2"
+   ],
+   "answerIndex": 1,
+   "explanation": ""
+  },
+  {
+   "id": "q093",
+   "category": "tournament",
+   "difficulty": 3,
+   "text": "عند تعادل فريقين في النقاط والمباريات المكسوبة، ما المعيار التالي في بطولتنا؟",
+   "options": [
+    "نسبة الأشواط",
+    "القرعة",
+    "نسبة النقاط",
+    "عدد الإنذارات"
+   ],
+   "answerIndex": 0,
+   "explanation": ""
+  },
+  {
+   "id": "q094",
+   "category": "tournament",
+   "difficulty": 3,
+   "text": "ما المعيار الأخير لفض التعادل في بطولتنا؟",
+   "options": [
+    "القرعة",
+    "نسبة الأشواط",
+    "عدد المباريات",
+    "نسبة النقاط المسجلة"
+   ],
+   "answerIndex": 3,
+   "explanation": ""
+  },
+  {
+   "id": "q095",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 25-23 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q096",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 26-24 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q097",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 25-24 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q098",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 27-24 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q099",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 30-28 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q100",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 25-10 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q101",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 26-25 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q102",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 24-22 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q103",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 28-26 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q104",
+   "category": "rules",
+   "difficulty": 2,
+   "text": "هل 29-27 نتيجة نهائية صالحة لشوط عادي؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الشوط العادي: 25 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q105",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 15-13 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q106",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 16-14 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q107",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 15-14 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q108",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 17-14 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q109",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 15-9 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q110",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 16-15 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q111",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 14-12 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 1,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  },
+  {
+   "id": "q112",
+   "category": "rules",
+   "difficulty": 3,
+   "text": "هل 18-16 نتيجة نهائية صالحة للشوط الفاصل؟",
+   "options": [
+    "نعم",
+    "لا"
+   ],
+   "answerIndex": 0,
+   "explanation": "الفاصل: 15 نقطة بفارق نقطتين."
+  }
+ ]
+}

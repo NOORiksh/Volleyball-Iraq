@@ -1,0 +1,23 @@
+workflows:
+  android-apk:
+    name: Android APK
+    instance_type: linux_x2
+    max_build_duration: 30
+    environment:
+      flutter: 3.24.5
+      java: 17
+    scripts:
+      - name: Generate Android project
+        script: |
+          cp -r lib /tmp/lib_backup
+          flutter create --org com.iraq --platforms=android .
+          rm -rf lib && cp -r /tmp/lib_backup lib
+          rm -f test/widget_test.dart
+      - name: Configure Android
+        script: python3 tools/setup_android.py
+      - name: Packages
+        script: flutter pub get
+      - name: Build APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk

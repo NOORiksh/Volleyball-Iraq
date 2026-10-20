@@ -1,0 +1,71 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+    function signedIn() { return request.auth != null; }
+    function role() { return request.auth.token.get('role', 'fan'); }
+    // مدير المسؤولين: كل شيء
+    function isSuper() { return signedIn() && role() == 'superadmin'; }
+    // صلاحيات المهام
+    function canT() { return signedIn() && role() in ['superadmin', 'admin', 'scorer']; }   // الفرق والمباريات
+    function canN() { return signedIn() && role() in ['superadmin', 'admin', 'editor']; }   // الأخبار
+    function canC() { return signedIn() && role() in ['superadmin', 'admin', 'moderator']; } // الشات والحظر
+    function canQ() { return signedIn() && role() in ['superadmin', 'admin']; }              // الأسئلة
+    function banned() { return exists(/databases/$(db)/documents/bans/$(request.auth.uid)); }
+
+    match /profiles/{uid} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['name', 'coins', 'xp', 'createdAt'])
+        && request.resource.data.coins == 0 && request.resource.data.xp == 0
+        && request.resource.data.name is string && request.resource.data.name.size() <= 40;
+      allow update: if signedIn() && request.auth.uid == uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name'])
+        && request.resource.data.name.size() <= 40;
+      allow delete: if isSuper();
+    }
+
+    match /users/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || isSuper());
+      allow create: if signedIn() && request.auth.uid == uid && (
+        (request.resource.data.keys().hasOnly(['whatsapp']) && request.resource.data.whatsapp is string)
+        || (request.resource.data.keys().hasOnly(['requestedDuty'])
+            && request.resource.data.requestedDuty in ['مسؤول', 'مدير المسؤولين']));
+      allow update, delete: if false;
+    }
+
+    match /teams/{id}     { allow read: if signedIn(); allow write: if canT(); }
+    match /matches/{id}   { allow read: if signedIn(); allow write: if canT(); }
+    match /news/{id}      { allow read: if signedIn(); allow write: if canN(); }
+    match /questions/{id} { allow read: if signedIn(); allow write: if canQ(); }
+    match /answers/{id}   { allow read, write: if canQ(); }
+
+    // الرعاة وإعدادات الصفحة الرئيسية (نصوص وصور): للمدير فقط
+    match /sponsors/{id}  { allow read: if signedIn(); allow write: if isSuper(); }
+    match /settings/{id}  { allow read: if signedIn(); allow write: if isSuper(); }
+
+    // كلمات سر المهام وسجل الموظفين: القراءة للمدير، والكتابة من الخادم فقط
+    match /rolePasswords/{id} { allow read: if isSuper(); allow write: if false; }
+    match /staffAccounts/{id} { allow read: if isSuper(); allow write: if false; }
+
+    match /notifications/{id} { allow read: if signedIn(); allow write: if false; }
+
+    match /bans/{uid} {
+      allow read: if signedIn() && (canC() || request.auth.uid == uid);
+      allow write: if canC();
+    }
+
+    match /messages/{id} {
+      allow read: if signedIn();
+      allow create: if signedIn() && !banned()
+        && request.resource.data.keys().hasOnly(['uid', 'name', 'text', 'at'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 500
+        && request.resource.data.at == request.time
+        && request.resource.data.name == get(/databases/$(db)/documents/profiles/$(request.auth.uid)).data.name;
+      allow delete: if canC() || (signedIn() && resource.data.uid == request.auth.uid);
+      allow update: if false;
+    }
+    // أي مسار آخر (مثل adminAttempts) مرفوض افتراضياً
+  }
+}
