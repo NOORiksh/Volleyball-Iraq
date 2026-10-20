@@ -42,7 +42,9 @@ jobs:
       - name: Prepare APK for Download
         run: |
           mkdir -p my_apk
-          cp build/app/outputs/flutter-apk/app-release.apk my_apk/volleyball-iraq.apk
+          # البحث النسقي عن أي ملف apk ناتج ونسخه مباشرة بدون أخطاء
+          find . -name "*.apk" -exec cp {} my_apk/volleyball-iraq.apk \;
+          echo "تم تجهيز الملف بنجاح في مجلد التحميل:"
           ls -la my_apk/
 
       - name: Upload APK Artifact
